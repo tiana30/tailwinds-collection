@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 
 function App() {
   const [image, setImages] = useState([]); //state array
-  
+  const [isLoading, setIsLoading] = useState(true); //state boolean
 
 
   useEffect(() => {
@@ -11,14 +11,18 @@ function App() {
       .then(result => result.json())
       .then(data =>  
         setImages(data.hits),
-        console.log(image)
+        setIsLoading(false),
+        //console.log(image)
       )
       .catch(err => console.log(`error ${err}`))
     }, 3000);
   }, [image]);
   return (
-    <div className="App">
-    <h1 className="text-teal-800 text-6xl">Hello World</h1>
+    <div className="container mx-auto">
+    <h1 className="text-teal-800 text-6xl">Gallery</h1>
+    {isLoading ? <h1 className="text-6xl text-teal-800 text-center mx-auto mt-32">Loading....</h1> 
+      : <p className="text-teal-800 text-3xl">Menampilkan Gambar</p>
+    }
     </div>
   );
 }
