@@ -25,7 +25,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ## Tutorial How To Make Image Gallery With Tailwindcss and PIXABAY API
 1. create react app file use syntax: yarn create react-app namefile
 2. install dependencies syntax : yarn add tailwindcss postcss-cli autoprefixer -D
-3. add file tailwind configuration full syntax: yarn tailwindcss init tailwind.config.js -full
+3. add file tailwind configuration full syntax: yarn tailwindcss init tailwind.config.js -full commit : [disini](https://github.com/tiana30/tailwinds-collection/tree/f118276dcea1ebee588b394be4d0d5c93a7996d5)
 4. add file postcss configuration manually at root folder
 5. create file styling tailwind.css and style.css to src/assets and add directive import to file tailwind.css
 6. generate output styling file use syntax : "build:css": "postcss src/assets/tailwind.css -o src/assets/style.css" and "start": "yarn run build:css && react-scripts start". add import style.css to index.js 
