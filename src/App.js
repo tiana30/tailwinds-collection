@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import ImageCard from './components/ImageCard';
 
 function App() {
   const [image, setImages] = useState([]); //state array
@@ -21,7 +22,12 @@ function App() {
     <div className="container mx-auto">
     <h1 className="text-teal-800 text-6xl">Gallery</h1>
     {isLoading ? <h1 className="text-6xl text-teal-800 text-center mx-auto mt-32">Loading....</h1> 
-      : <p className="text-teal-800 text-3xl">Menampilkan Gambar</p>
+      : <div className="grid grid-cols-3 gap-4">
+        {image.map(thumbnail => (
+          <ImageCard key={thumbnail.id} image={thumbnail} />
+        ))}
+        
+        </div>
     }
     </div>
   );
