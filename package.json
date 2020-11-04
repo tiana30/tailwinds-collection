@@ -1,5 +1,5 @@
 {
-  "name": "master",
+  "name": "tailwinds-collection",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -30,5 +30,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "main": "index.js",
+  "author": "tiana30 <tiana3059@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "postcss-cli": "^8.2.0",
+    "tailwindcss": "^1.9.6"
   }
 }
